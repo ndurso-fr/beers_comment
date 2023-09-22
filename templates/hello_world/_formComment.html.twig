@@ -1,0 +1,27 @@
+
+<div class="border p-3 mt-3">
+
+    <form id="form" name="form_comment" method="post" action={{ path('app_comment_create') }}>
+        <div class="form-group">
+            <div class="mb-3">
+                <label for="username" class="form-label">User Name</label>
+                <div class="text-danger">{{ error_message_user }}</div>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Choose a user name">
+            </div>
+            <div class="mb-3">
+                <label for="beers_name_list" class="form-label">Beer Name</label>
+                <div class="text-danger">{{ error_message_bear }}</div>
+                    <input list="beers_name_list" name="beername" id="beername"
+                           placeholder="Search a beer name..." class="form-control">
+                    <datalist id="beers_name_list">
+                    </datalist>
+            </div>
+            <div class="mb-3">
+                <label for="comment" class="form-label">Comment</label>
+                <textarea type="text" class="form-control" id="comment" name="comment"
+                          placeholder="Enter your comment"></textarea>
+            </div>
+            <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>

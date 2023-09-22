@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('hello_world_form') }}
+{% endblock %}
+
+
+{% block title %}Create Comment without symfony{% endblock %}
+
+{% block body %}
+    <h1>Create Comment without symfony</h1>
+
+    <div class="container p-3">
+        <a href="{{ path('app_hello_world') }}">back to list</a>
+        {% include 'hello_world/_formComment.html.twig' %}
+    </div>
+
+{#    {{ include('comment/_delete_form.html.twig') }}#}
+{% endblock %}
